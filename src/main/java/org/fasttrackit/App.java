@@ -4,11 +4,12 @@ package org.fasttrackit;
  * Hello world!
  *
  */
-public class App 
-{
-    public static void main( String[] args )
-    {
-        Car car = new Car();
+public class App {
+    public static void main(String[] args) {
+
+        Engine engine = new Engine();
+        engine.manufacturer = "Renault";
+        Car car = new Car(engine);
         car.name = "Dacia";
         car.color = "blue";
         car.doorCount = 4;
@@ -16,14 +17,13 @@ public class App
         car.fuelLevel = 50;
         car.running = true;
 
-        Engine engine = new Engine();
-        engine.manufacturer = "Renault";
-        car.engine = engine;
+
 
         System.out.println("Our engine");
         System.out.println(car.engine.manufacturer);
 
-        Car car2 = new Car();
+
+        Car car2 = new Car(new Engine());
         car2.name = "Audi";
         car2.color = "red";
         car2.doorCount = 2;
@@ -46,9 +46,8 @@ public class App
         System.out.println(car.engine);
 
         double distance = car.accelerate(60, 0.5);
-         distance = car.accelerate(60, 0.5);
-        System.out.println("Distance in App.main: " + distance);
-
+        distance = car.accelerate(60, 0.5);
 
     }
 }
+

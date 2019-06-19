@@ -1,6 +1,7 @@
 package org.fasttrackit;
 
 import java.time.LocalDate;
+import java.util.Scanner;
 
 public class Vehicle {
 
@@ -13,7 +14,7 @@ public class Vehicle {
     double traveledDistance;
     LocalDate createdTime;
 
-    public double accelerate(double speed, double durationInHours){
+    public double accelerate(double speed, double durationInHours) {
         //concatenation
         System.out.println(name + " is accelerating with " + speed + " km/h for " + durationInHours + "h. ");
 
@@ -37,5 +38,6 @@ public class Vehicle {
 
         return distance;
     }
-
 }
+
+
