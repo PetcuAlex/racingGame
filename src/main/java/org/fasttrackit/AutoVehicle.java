@@ -11,4 +11,8 @@ public class AutoVehicle extends Vehicle{
 
     }
 
+    public AutoVehicle() {
+
+        this(new Engine());
+    }
 }

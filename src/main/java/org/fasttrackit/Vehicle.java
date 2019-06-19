@@ -19,6 +19,7 @@ public class Vehicle {
     }
 
 
+
     public double accelerate(double speed, double durationInHours) {
         //concatenation
         System.out.println(name + " is accelerating with " + speed + " km/h for " + durationInHours + "h. ");
@@ -42,6 +43,12 @@ public class Vehicle {
 
 
         return distance;
+    }
+
+    public  double accelerate(double speed) {
+
+        accelerate(speed, 1);
+        return accelerate(speed, 1);
     }
 
 
