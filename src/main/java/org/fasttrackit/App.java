@@ -68,6 +68,16 @@ public class App {
         car2.accelerate(100);
 
 
+        System.out.println("Today");
+        System.out.println("");
+        System.out.println(car);
+
+        BatMobile batMobile = new BatMobile();
+        batMobile.setName("Cheating car");
+        batMobile.accelerate(60,1);
+        batMobile.accelerate(60,1);
+
+
 
     }
 }

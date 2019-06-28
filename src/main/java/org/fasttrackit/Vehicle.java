@@ -51,6 +51,11 @@ public class Vehicle {
         return accelerate(speed, 1);
     }
 
+    // co-variant overriding
+    @Override
+    protected Vehicle clone() throws CloneNotSupportedException {
+        return new Vehicle();
+    }
 
     public String getName() {
         return name;
@@ -119,6 +124,23 @@ public class Vehicle {
     public static int getTotalCount() {
         return totalCount;
     }
+
+
+    @Override
+    public String toString() {
+        return "Vehicle{" +
+                "name='" + name + '\'' +
+                ", mileage=" + mileage +
+                ", color='" + color + '\'' +
+                ", maxSpeed=" + maxSpeed +
+                ", running=" + running +
+                ", fuelLevel=" + fuelLevel +
+                ", traveledDistance=" + traveledDistance +
+                ", createdTime=" + createdTime +
+                '}';
+    }
+
+
 }
 
 
