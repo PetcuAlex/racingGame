@@ -8,8 +8,30 @@ public class App {
     public static void main(String[] args) {
 
 
+
         Game game = new Game();
         game.start();
+
+//        //string pool
+////        String a = "test";
+////        String b = "test";
+////        String c = new String("test");
+////
+////        System.out.println(a == b);
+////        System.out.println(a == c);
+////        System.out.println(a.equals(c));
+////
+
+//        Vehicle vehicle = new Vehicle();
+//        vehicle.setName("Dacia");
+//
+//        Vehicle vehicle2 = new Vehicle();
+//        vehicle2.setName("Dacia");
+//
+//        System.out.println(vehicle == vehicle2);
+//        System.out.println(vehicle.equals(vehicle2));
+
+
 
 
 //
