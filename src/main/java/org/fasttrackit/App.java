@@ -12,15 +12,15 @@ public class App {
         Game game = new Game();
         game.start();
 
-//        //string pool
-////        String a = "test";
-////        String b = "test";
-////        String c = new String("test");
-////
-////        System.out.println(a == b);
-////        System.out.println(a == c);
-////        System.out.println(a.equals(c));
-////
+        //string pool
+//        String a = "test";
+//        String b = "test";
+//        String c = new String("test");
+//
+//        System.out.println(a == b);
+//        System.out.println(a == c);
+//        System.out.println(a.equals(c));
+//
 
 //        Vehicle vehicle = new Vehicle();
 //        vehicle.setName("Dacia");
@@ -30,10 +30,10 @@ public class App {
 //
 //        System.out.println(vehicle == vehicle2);
 //        System.out.println(vehicle.equals(vehicle2));
-
-
-
-
+//
+//
+//
+//
 //
 //        Engine engine = new Engine();
 //        engine.manufacturer = "Renault";
@@ -75,20 +75,20 @@ public class App {
 //
 //        double distance = car.accelerate(60, 0.5);
 //        distance = car.accelerate(60, 0.5);
+
+//        demo for static variables ( class variables)
+//        System.out.println("");
+//        System.out.println("Studying static variables");
+//        System.out.println("");
 //
-////        demo for static variables ( class variables)
-////        System.out.println("");
-////        System.out.println("Studying static variables");
-////        System.out.println("");
-////
-////        car.totalCount = 1;
-////        System.out.println("Total count from car:" + car.totalCount);
-////        car2.totalCount = 2;
-////        System.out.println("Total count from car after settin car2:" + car.totalCount);
-////        System.out.println("Total count from car2:" + car.totalCount);
-////        System.out.println("Total count from Vehicle class: " + Vehicle.totalCount);
-////
+//        car.totalCount = 1;
+//        System.out.println("Total count from car:" + car.totalCount);
+//        car2.totalCount = 2;
+//        System.out.println("Total count from car after settin car2:" + car.totalCount);
+//        System.out.println("Total count from car2:" + car.totalCount);
+//        System.out.println("Total count from Vehicle class: " + Vehicle.totalCount);
 //
+
 //
 //        System.out.println("Total vehicles: " + Vehicle.getTotalCount());
 //
@@ -104,7 +104,7 @@ public class App {
 //        batMobile.setName("Cheating car");
 //        batMobile.accelerate(60,1);
 //        batMobile.accelerate(60,1);
-
+//
 
     }
 }
