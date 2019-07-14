@@ -1,6 +1,7 @@
 package org.fasttrackit;
 
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
@@ -16,11 +17,31 @@ public class Game {
         initializeTracks();
         displayTrack();
 
+        Track selectedTrack = getTrackSelectedByUser();
+
         int countCompetitors = getCompetitorsNumberFromUser();
         for (int i = 0; i < countCompetitors; i++) {
             addCompetitor();
         }
         displayCompetitors();
+
+    }
+
+    private Track getTrackSelectedByUser() {
+        System.out.println("Please enter track number.");
+        try {
+            Scanner in = new Scanner(System.in);
+            int trackNumber = in.nextInt();
+
+            Track track = tracks[trackNumber - 1];
+            System.out.println("Selected track: " + track.getName());
+            return track;
+        }catch (InputMismatchException | ArrayIndexOutOfBoundsException e){
+            System.out.println("You entered an invalid track number.Please try again...");
+
+            //recursion - a method invoking itself
+            return getTrackSelectedByUser();
+        }
 
     }
 
@@ -40,7 +61,11 @@ public class Game {
     private int getCompetitorsNumberFromUser() {
         System.out.println("Please enter vehicle count:");
         Scanner in = new Scanner(System.in);
-        return in.nextInt();
+        try {
+            return in.nextInt();
+        } catch (InputMismatchException e) {
+            throw new RuntimeException("You entered an invalid value");
+        }
 
 
     }
