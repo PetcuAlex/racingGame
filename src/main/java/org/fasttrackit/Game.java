@@ -25,6 +25,38 @@ public class Game {
         }
         displayCompetitors();
 
+        boolean winnernotKnown = true;
+        int competitorsWithoutFuel = 0;
+
+        while (winnernotKnown && competitorsWithoutFuel <competitors.size()) {
+            //enhanced for / for-each
+            for (Vehicle competitor : competitors) {
+                double speed = getSpeedFromUser();
+                competitor.accelerate(speed);
+
+                if (competitor.getTraveledDistance() >= selectedTrack.getLength()) {
+                    System.out.println("Congrats! The winner is: " + competitor.getName());
+                    winnernotKnown = false;
+                    break;
+                }
+
+                if (competitor.getFuelLevel()<=0){
+                    competitorsWithoutFuel++;
+                }
+            }
+        }
+    }
+
+    private double getSpeedFromUser() {
+        System.out.println("Please enter acceleration speed:");
+        Scanner in = new Scanner(System.in);
+        try {
+            return in.nextDouble();
+        } catch (InputMismatchException e) {
+            System.out.println("You have entered an invalid value.");
+            return getSpeedFromUser();
+        }
+
     }
 
     private Track getTrackSelectedByUser() {
@@ -36,7 +68,7 @@ public class Game {
             Track track = tracks[trackNumber - 1];
             System.out.println("Selected track: " + track.getName());
             return track;
-        }catch (InputMismatchException | ArrayIndexOutOfBoundsException e){
+        } catch (InputMismatchException | ArrayIndexOutOfBoundsException e) {
             System.out.println("You entered an invalid track number.Please try again...");
 
             //recursion - a method invoking itself
